@@ -58,7 +58,8 @@ Langren1644 |>
   geom_text(data=text,
             aes(x=x, y=y, label=label),
             angle=0,hjust=1, family="cormorant",size=6) +
-  labs(title="Van Langren's composition of longitude differences between Toledo and Rome",
+  labs(title="Van Langren's 1644 diagram of longitude differences between Toledo and Rome",
        subtitle="Sometimes known as the first statistical graph") +
   theme(plot.title = element_text(hjust=0.5, size=20),
-        plot.subtitle = element_text(hjust=0.5, size=15))
+        plot.subtitle = element_text(hjust=0.5, size=15)) +
+  annotate("point",x=16.5,y=0,color="red")
