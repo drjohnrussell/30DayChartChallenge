@@ -8,9 +8,9 @@
     5.  ranking\ - Pyx
     6.  theme day: florence nightingale
 -   **Distributions**\
-    7.  outliers\
-    8.  histogram\
-    9.  diverging\
+    7.  outliers\ - President
+    8.  histogram\ - Pyx
+    9.  diverging\ - Langren
     10. multi-modal\
     11. stripes\
     12. data day: [data.gov](https://data.gov/)
