@@ -11,8 +11,8 @@
     7.  outliers\ - President
     8.  histogram\ - Pyx
     9.  diverging\ - Langren
-    10. multi-modal\
-    11. stripes\
+    10. multi-modal\ - OldMaps
+    11. stripes\ - John Snow
     12. data day: [data.gov](https://data.gov/)
 -   **Relationships**\
     13. clusters\
