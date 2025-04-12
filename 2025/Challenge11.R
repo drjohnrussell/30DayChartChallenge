@@ -27,5 +27,4 @@ Snow.deaths |>
   labs(title="John Snow's Cholera Map",
        subtitle="With contour lines showing densities of death",
        caption="Using data from HistData package")
-
                     
