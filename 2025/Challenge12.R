@@ -42,6 +42,10 @@ congestion4 <- congestion3 |>
   summarise(crz_entries=mean(crz_entries,na.rm=TRUE),
             excluded_roadway_entries=mean(excluded_roadway_entries,na.rm=TRUE))
 
+congestion4hline <- data.frame(days=c("Weekday","Weekend"),
+                               time1=hm(c("05:00","09:00")),
+                               time=hm(c("21:00","21:00")))
+
 congestion4 |> 
   ggplot(aes(x=time,y=crz_entries, color=vehicle_class)) +
   geom_line() +
@@ -50,7 +54,9 @@ congestion4 |>
   theme_minimal() +
   theme(legend.position="bottom") +
   labs(title="Average Congestion Zone Entries by Vehicle Class",
-       subtitle="Weekday vs Weekend",
+       subtitle="Weekday vs Weekend (gray line denotes when tolls change during the day)",
        x="Time of Day",
        y="Average Congestion Zone Entries",
-       color="Vehicle Class")
+       color="Vehicle Class") +
+  geom_vline(data=congestion4hline,aes(xintercept=time1), linetype="dashed", color="gray") +
+  geom_vline(data=congestion4hline,aes(xintercept=time), linetype="dashed", color="gray")
