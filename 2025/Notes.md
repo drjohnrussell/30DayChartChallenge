@@ -15,10 +15,10 @@
     11. stripes\ - John Snow
     12. data day: [data.gov](https://data.gov/) - congestion pricing
 -   **Relationships**\
-    13. clusters\
-    14. kinship\
-    15. complicated\
-    16. negative\
+    13. clusters\ - Pollen
+    14. kinship\ - PearsonLee
+    15. complicated\ - Bowley
+    16. negative\ - Halley
     17. birds\
     18. theme day: El País
 -   **Timeseries**\

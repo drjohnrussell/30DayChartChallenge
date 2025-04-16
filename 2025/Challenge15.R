@@ -11,6 +11,7 @@ Bowley |>
     `Rolling Average over 10 Years` = rollmean(Value,10,fill=NA,align="center")) |> 
   pivot_longer(cols = c(`Rolling Average over 3 Years`:`Rolling Average over 10 Years`), 
                names_to = "Type", values_to = "value") |>
+  mutate(Type=fct_inorder(Type)) |> 
   ggplot(aes(x = Year, y = value, color = Type)) +
   geom_line(size=1) +
   geom_point(aes(y=Value), color="black",show.legend=FALSE) +
