@@ -19,8 +19,8 @@
     14. kinship\ - PearsonLee
     15. complicated\ - Bowley
     16. negative\ - Halley
-    17. birds\
-    18. theme day: El País
+    17. birds\ - Penguins
+    18. theme day: El País - Guerry
 -   **Timeseries**\
     19. smooth\
     20. urbanization\

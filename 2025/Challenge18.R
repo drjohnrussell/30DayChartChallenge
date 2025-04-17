@@ -4,9 +4,9 @@ library(HistData)
 library(Guerry)
 library(patchwork)
 
-data("gfrance85")
+data("gfrance")
 
-data2 <- st_as_sf(gfrance85)
+data2 <- st_as_sf(gfrance)
 
 data2 |> 
   ggplot() +
