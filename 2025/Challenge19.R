@@ -37,7 +37,7 @@ Wheat |>
                 ymin=ymin,
                 ymax=ymax,
                 alpha=alpha), 
-            fill="white", linewidth=0) +
+            fill="white", linewidth=0, show.legend=FALSE) +
   geom_line(aes(x=Year,y=Wages), color="red",size=1) +
   geom_line(aes(x=Year,y=Wages), color="black", size=.5) +
   geom_rect(data=monarchs,
