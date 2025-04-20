@@ -8,7 +8,10 @@ monarchs <- Wheat.monarchs |>
   mutate(alternating=rep(c(0,-1), length.out = nrow(Wheat.monarchs)),
          alternating=alternating+commonwealth)
 
+model <- c(predict(loess(Wages ~ Year, data=Wheat)),NA,NA,NA)
+
 Wheat |> 
+  bind_cols(model) |> 
   filter(Year!=1821) |> 
   mutate(xmin=Year,
          xmax=Year+5,
@@ -44,6 +47,8 @@ Wheat |>
                 label=name),size=2.5) +
   scale_fill_manual(values=c("black","white")) +
   geom_vline(xintercept=1565) +
+  geom_ribbon(aes(x=Year,ymin = 0,ymax = ...4),
+              alpha = 0.3,fill = 'lightblue') +
   theme_minimal() +
   labs(y="",
        x="5 Years Each Division",
