@@ -8,8 +8,6 @@ monarchs <- Wheat.monarchs |>
   mutate(alternating=rep(c(0,-1), length.out = nrow(Wheat.monarchs)),
          alternating=alternating+commonwealth)
 
-model <- c(predict(loess(Wages ~ Year, data=Wheat)),NA,NA,NA)
-
 Wheat |> 
   bind_cols(model) |> 
   filter(Year!=1821) |> 
@@ -31,8 +29,8 @@ Wheat |>
                      breaks=c(1565,seq(1600,1800,by=50)),
                      minor_breaks = seq(1565,1830,by=5),
                      expand=c(0,0)) +
-  geom_smooth(aes(x=Year,y=Wages), color="red",size=1) +
-  geom_smooth(aes(x=Year,y=Wages), color="black", size=.5) +
+  geom_line(aes(x=Year,y=Wages), color="red",size=1) +
+  geom_line(aes(x=Year,y=Wages), color="black", size=.5) +
   geom_rect(data=monarchs,
             aes(xmin=start,
                 xmax=end,
@@ -47,7 +45,7 @@ Wheat |>
                 label=name),size=2.5) +
   scale_fill_manual(values=c("black","white")) +
   geom_vline(xintercept=1565) +
-  geom_ribbon(aes(x=Year,ymin = 0,ymax = ...4),
+  geom_ribbon(aes(x=Year,ymin = 0,ymax = Wages),
               alpha = 0.3,fill = 'lightblue') +
   theme_minimal() +
   labs(y="",
