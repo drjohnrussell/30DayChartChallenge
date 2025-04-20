@@ -8,17 +8,19 @@ monarchs <- Wheat.monarchs |>
   mutate(alternating=rep(c(0,-1), length.out = nrow(Wheat.monarchs)),
          alternating=alternating+commonwealth)
 
+alphaness <- tibble(xmin=rep(1565,100),
+                    xmax=rep(1830,100),
+                    ymin=seq(0,31.99,by=.32),
+                    ymax=seq(1,32.99,by=.32),
+                    alpha=seq(.99,0,by=-.01))
+
 Wheat |> 
-  bind_cols(model) |> 
   filter(Year!=1821) |> 
-  mutate(xmin=Year,
-         xmax=Year+5,
-         ymax=Wheat,
-         ymin=case_when(between(Year,1565,1595) ~ 30,
-                        between(Year,1600,1760) ~ 20,
-                        .default=30)) |> 
   ggplot() +
-  geom_rect(aes(xmin=xmin, xmax=xmax, ymin=ymin, ymax=ymax), 
+  geom_rect(aes(xmin=Year,
+                xmax=Year+5,
+                ymin=0,
+               ymax=Wheat), 
             fill="darkslategrey", color="black", linewidth=.1) +
   scale_y_continuous(limits=c(0,100),
                      breaks = seq(0,100,by=10),
@@ -29,6 +31,13 @@ Wheat |>
                      breaks=c(1565,seq(1600,1800,by=50)),
                      minor_breaks = seq(1565,1830,by=5),
                      expand=c(0,0)) +
+  geom_rect(data=alphaness,
+            aes(xmin=xmin,
+                xmax=xmax,
+                ymin=ymin,
+                ymax=ymax,
+                alpha=alpha), 
+            fill="white", linewidth=0) +
   geom_line(aes(x=Year,y=Wages), color="red",size=1) +
   geom_line(aes(x=Year,y=Wages), color="black", size=.5) +
   geom_rect(data=monarchs,
