@@ -22,11 +22,11 @@
     17. birds\ - Penguins
     18. theme day: El País - Guerry
 -   **Timeseries**\
-    19. smooth\
-    20. urbanization\
-    21. fossils\
-    22. stars\
-    23. log scale\
+    19. smooth\ - Playfair
+    20. urbanization\ - Prostitution
+    21. fossils\ - Mesosaurus
+    22. stars\ - Herschel double
+    23. log scale\ - HR?
     24. data day: [WHO](https://www.who.int/data/gho)
 -   **Uncertainties**\
     25. risk\
