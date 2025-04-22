@@ -27,7 +27,7 @@
     21. fossils\ - Mesosaurus
     22. stars\ - Herschel double
     23. log scale\ - HR?
-    24. data day: [WHO](https://www.who.int/data/gho)
+    24. data day: [WHO](https://www.who.int/data/gho) - rgho package
 -   **Uncertainties**\
     25. risk\
     26. monochrome\
