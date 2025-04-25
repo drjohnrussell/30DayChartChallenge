@@ -29,8 +29,8 @@
     23. log scale\ - HR?
     24. data day: [WHO](https://www.who.int/data/gho) - rgho package
 -   **Uncertainties**\
-    25. risk\
-    26. monochrome\
+    25. risk\ - Farr's Cholera Deaths
+    26. monochrome\ - 
     27. noise\
     28. inclusion\
     29. extraterrestrial\
