@@ -27,11 +27,11 @@ PolioTrials |>
     expand = c(0,0)
   ) +
   scale_fill_manual(values=c("grey66","black")) +
-  theme_light() +
+  theme_grey() +
   theme(legend.position="bottom",
         axis.text.y=element_blank(),
         panel.grid=element_blank(),
         axis.line=element_blank()) +
   labs(fill="Cases per 200,000",
        title="1954 Polio Trials",
-       subtitle="These took place over two clinical trials - an RCT, and a Comparative Trial")
+       subtitle="These took place over two clinical trials - a Comparative Trial and a RCT",)
