@@ -30,8 +30,8 @@
     24. data day: [WHO](https://www.who.int/data/gho) - rgho package
 -   **Uncertainties**\
     25. risk\ - Farr's Cholera Deaths
-    26. monochrome\ - 
-    27. noise\
+    26. monochrome\ - Polio vaccine 
+    27. noise\ - Waite's Fingerprints
     28. inclusion\
     29. extraterrestrial\
     30. theme day: national geographic
