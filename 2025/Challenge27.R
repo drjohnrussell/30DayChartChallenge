@@ -29,11 +29,11 @@ Loops + plot_spacer() + main + Whorls +
   plot_layout(
     ncol = 2, 
     nrow = 2, 
-    widths = c(6, 1),
+    widths = c(5, 1),
     heights = c(1, 6)
   ) +
   plot_annotation(
     title = "Waite's data on Patterns in Fingerprints",
-    subtitle = "Distribution of loops and whorls in 2000 right hands",
+    subtitle = "Distribution of loops and whorls in 2000 right hands with marginal histograms",
     caption = "Source: HistData package"
   )
