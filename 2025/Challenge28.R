@@ -7,13 +7,19 @@ means <- Yeast |>
   group_by(sample) |> 
   summarise(means=weighted.mean(count,freq))
 
-data_spline <- as.data.frame(spline(data$Year, data$`Property Valuation`,n=200)) |> 
-  rename(Year=x,`Property Valuation`=y)
+calculated <- tibble(calculated=c(202,138,47,11,2,0,
+                                  106,141,93,41,14,4,1,
+                                  66,119,107,64,29,10,3,1,0,0,
+                                  4,17,41,63,74,70,54,36,21,11,5,2,1))
+Yeast <- Yeast |> 
+  bind_cols(calculated)
 
 Yeast |> 
   ggplot() +
   geom_col(aes(x=count,y=freq,fill=sample)) +
-  geom_vline(data=means,aes(xintercept=means,color=sample),linetype="dashed") +
+  geom_col(aes(x=count,y=calculated),fill=NA,color="black",linetype="dashed") +
+  geom_vline(data=means,aes(xintercept=means,color=sample)) +
+  geom_text(data=means,aes(x=means,y=175,label=paste0("mean=",round(means,2))),vjust=0,hjust=0) +
   facet_wrap(~sample,ncol=2) +
   theme_minimal() +
   guides(fill=FALSE,color=FALSE) +
