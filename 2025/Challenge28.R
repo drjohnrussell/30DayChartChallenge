@@ -25,4 +25,5 @@ Yeast |>
   guides(fill=FALSE,color=FALSE) +
   labs(x="Number of yeast cells seen in the grid square",
        y="Frequency of the count in the grid square",
-       title="Student's Yeast Cells")
+       title="Student's Yeast Cells",
+       subtitle="Actual counts vs predicted counts based on t-distribution")
