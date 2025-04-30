@@ -33,5 +33,5 @@
     26. monochrome\ - Polio vaccine 
     27. noise\ - Waite's Fingerprints
     28. inclusion\ - Students Yeast Cells
-    29. extraterrestrial\
+    29. extraterrestrial\ - exoplanets
     30. theme day: national geographic
